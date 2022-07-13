@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bandicoot-prod
+  labels:
+    app: bandicoot
+    ver: '2'
+    env: prod
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: bandicoot
